@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./default.css">
+    <link rel="stylesheet" href="./introductionPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Madimi+One&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Madimi+One&family=Ojuju:wght@200..800&family=Rock+3D&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <title>My Website Homepage</title>
+    <script type="module" src="tieFighter.js"></script>
+    <script type="module" src="myHomePage.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        canvas {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading">
+        <img src="./img/brush2-3.png" alt="Background Image" class="loading-background-img">
+        <img src="./img/bb8.gif" alt="Loading" class="loading-img">
+        <span>Loading...</span>
+    </div>
+    
+
+    <canvas id="c"></canvas>
+    <div id="content">
+        <!-- ************************* Introduction Page Starts ************************* -->
+        <div id="index-demo-page" class="starwars-demo" style="display: block">
+            <img src="star.svg" alt="Star" class="star">
+            <img src="wars.svg" alt="Wars" class="wars">
+            <h2 class="byline" id="byline">COMP6780 WEBSITE</h2>
+        </div>
+        <!-- ************************* Introduction Page Ends ************************* -->
+
+        <!-- ************************* Home Page Starts ************************* -->
+        <header id="index-header" class="main-header" style="display: none;">
+            <div class="header-content">
+                <!-- Logo section -->
+                <img src="./img/myLogo.png" alt="My Logo">
+                <!-- Navigation menu -->
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="index.html" aria-label="Link to index page">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="details-dropdown" aria-label="Details">Details</a>
+                            <!-- Dropdown Menu Items -->
+                            <ul id="details-dropdown" class="dropdown-content">
+                                <li><a href="me.html" aria-label="Link to about me page">About me</a></li>
+                                <li><a href="sitemap.html" aria-label="Link to sitemap of whole website">Site Map</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="contact-dropdown" aria-label="Contact">Contact</a>
+                            <!-- Dropdown Menu Items -->
+                            <ul id="contact-dropdown" class="dropdown-content">
+                                <li><a href="contact.html" aria-label="Link to contact information page">Contact Information</a></li>
+                                <li><a href="Feedback.html" aria-label="Link to Feedback page to give Feedback">Feedback Form</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="about-dropdown" aria-label="About">About</a>
+                            <!-- Dropdown Menu Items -->
+                            <ul id="about-dropdown" class="dropdown-content">
+                                <li><a href="sourceLog.html" aria-label="Link to sourceLog page for website">Source Log</a></li>
+                                <li><a href="assignment.html" aria-label="Link to assignment page">Assignment Link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Place holder here, detailed in sessions.html -->
+        <div id="index-img" class="img-container" style="display: none;">
+            <div class="img-box">
+                <a href="movies.html" aria-label="Link to Movie session page">
+                    <img src="./img/index-movies-session.jpg" alt="Left movie image" class="rounded-image">
+                    <div class="img-text">Movies</div>
+                </a>
+            </div>
+
+            <div class="img-box">
+                <a href="me.html" aria-label="Link to about me page to learn more about me">
+                    <img src="./img/index-settings-session.jpg" alt="Center settings image" class="rounded-image">
+                    <div class="img-text">Settings</div>
+                </a>
+            </div>
+
+            <div class="img-box">
+                <a href="https://collider.com/star-wars-all-eras-explained/" aria-label="Link to external Starwars eras page.">
+                    <img src="./img/index-eras-session.jpg" alt="Right eras imgae" class="rounded-image">
+                    <div class="img-text">Eras</div>
+                </a>
+            </div>
+        </div>
+
+        <div id="index-author-container" class="author-container">
+            <div id="index-author-text" class="author-text" style="display: none;">
+                <p>COMP6780 2024S1.</p>
+                <p>Author: Zehua Liu.</p>
+                <p>UID: u7544341</p>
+            </div>
+        </div>
+
+        <!-- press / press space to skip during the animation, detailed in js -->
+        <div id="index-skip" class="skip-container">
+            <div class="skip-text">
+                <p>press space to skip</p>
+            </div>
+        </div>
+
+        <!-- Call to Action (CTA): Primary CTA button -->
+        <main>
+            <div id="CTA-session" class="session-container" style="display: none;">
+                <div class="CTA">
+                    <p>Hi, I'm Zehua.</p>
+                    <p>Welcome to my page.</p>
+                    <p>Additionally, welcome to the Staw Wars Universe...</p>
+                </div>
+                <div id="R2-region">
+                    <div class="R2D2" id="R2D2">
+                        <a href="sessions.html" aria-label="Link to session page"><img src="./img/R2D2.png" alt="R2D2"></a>
+                    </div>
+                </div>
+                <!-- <button id="myButton" class="button"> -->
+                <div class="button-container">
+                    <button id="myButton" class="button">Explore</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Help button -->
+        <button class="help-btn" title="Help"></button>
+
+        <!-- Scroll to Top button -->
+        <button class="scroll-to-top" title="Go to top"></button>
+
+        <!-- Back to Main button -->
+        <button class="back-to-main" title="Back to main page"></button>
+
+        <!-- More button -->
+        <a href="https://www.starwars.com/" target="_blank" class="more-btn" title="More" aria-label="StarWars Official website"></a>
+
+        <!-- ************************* Home Page Ends ************************* -->
+    </div>
+
+
+
+    <script src="dropDown.js"></script>
+    <script src="helpButton.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+.title {
+    padding-left: 30px;
+    padding-top: 30px;
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    font-style: normal;
+  }
+  /* Text with underline */
+  .title-with-line {
+    padding-left: 30px;
+    font-size: 24px;
+    color: #fff;
+    margin: 20px 0;
+  }
+  
+  .title-with-line:after {
+    content: '';
+    display: block;
+    padding-left: 30px;
+    width: 50%; /* width compare with full screen */
+    padding-top: 5px;
+    border-bottom: 2px solid #fff;
+  }
+  
+  .rounded-image {
+    width: 100%;
+    height: auto; 
+    border-radius: 20px; /* round the image */
+  }
+  
+  .rounded-image {
+    /* this is important for setting the scale of the original iamge, so that it could be displayed properly */
+    width: 210px;
+    height: 280px;
+    border-radius: 10px; /* round the image */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+  }
+
+/* create CTA button! */
+.button {
+  position: relative;
+  left: 80%;
+  scale: 1.5;
+  background-color: black; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 30px; /* Padding inside the button */
+  font-family: 'Arial', sans-serif; /* Font family for the text */
+  font-size: 16px; /* Font size for the text */
+  font-weight: bold; /* Font weight for the text */
+  border: 2px solid #FFD700; /* Gold border color */
+  border-radius: 25px; /* Rounded corners */
+  outline: none; /* Removes the outline */
+  cursor: pointer; /* Cursor changes to a hand icon */
+  box-shadow: 0 0 20px #FFD700; /* Glowing effect */
+  text-shadow: 0 0 5px #FFD700; /* Text glowing effect */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  text-transform: uppercase;
+}
+
+.button:hover {
+  box-shadow: 0 0 30px #FFD700, 0 0 40px #FFD700; /* Enhances the glow when hovering */
+}
+
+.button:active {
+  transform: scale(0.95); /* Slightly decreases the button size when clicked */
+}
+
+/* WHEN WITH DARK-MODE */
+.dark-mode .img-box {
+    display: flex;
+    padding: 20px;
+}
+.dark-mode .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* display images in the container */
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+.dark-mode .hide-info {
+    display: block;
+    padding-left: 40px;
+}
+.dark-mode .img-box:hover {
+    transform: scale(1); /* DO NOT enlarge the image on hover if with dark-mode*/
+  }
+.dark-mode .movie-info:hover {
+    display: none;
+}
+
+.dark-mode .movie-info {
+  display: none;
+}

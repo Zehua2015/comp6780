@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./default.css">
+    <link rel="stylesheet" href="./introductionPage.css">
+  <!-- Different fonts using here -->
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Madimi+One&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Madimi+One&family=Ojuju:wght@200..800&family=Rock+3D&display=swap" rel="stylesheet">
+      <!-- author-text-font -->  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <!-- index-image-text-font -->  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <title>My Website Homepage</title>
+</head>
+<body>
+    <!-- ************************* Home Page Starts ************************* -->
+  <!-- The header section -->
+  <header id="index-header" class="main-header">
+    <div class="header-content">
+      <!-- Logo section -->
+      <img src="./img/myLogo.png" alt="My Logo">
+      <!-- Navigation menu -->
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html" aria-label="Link to index page">Home</a></li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="details-dropdown" aria-label="Details">Details</a>
+            <!-- Dropdown Menu Items -->
+            <ul id="details-dropdown" class="dropdown-content">
+              <li><a href="me.html" aria-label="Link to about me page">About me</a></li>
+              <li><a href="sitemap.html" aria-label="Link to sitemap of whole website">Site Map</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="contact-dropdown" aria-label="Contact">Contact</a>
+            <!-- Dropdown Menu Items -->
+            <ul id="contact-dropdown" class="dropdown-content">
+              <li><a href="contact.html" aria-label="Link to contact information page">Contact Information</a></li>
+              <li><a href="Feedback.html" aria-label="Link to Feedback page to give Feedback">Feedback Form</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="about-dropdown" aria-label="About">About</a>
+            <!-- Dropdown Menu Items -->
+            <ul id="about-dropdown" class="dropdown-content">
+              <li><a href="sourceLog.html" aria-label="Link to sourceLog page for website">Source Log</a></li>
+              <li><a href="assignment.html" aria-label="Link to assignment page">Assignment Link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+
+  <!-- Display three sessions to choose (linked from primary CTA button) -->
+  <div id = "index-img" class = "img-container" style = "display: flex">
+    <div class="img-box">
+      <a href = "movies.html" aria-label="Link to Starwars movies page">
+        <img src="./img/index-movies-session.jpg" alt="Left" class="rounded-image">
+        <div class="img-text">Movies</div>
+      </a>
+    </div>
+
+    <div class="img-box">
+      <a href = "https://starwars.fandom.com/wiki/Star_Wars" aria-label="Star Wars Settings">
+        <div class="img-box2">
+            <img src="./img/index-settings-session.jpg" alt="Center" class="rounded-image">
+            <div class="overlay-text">External Link for Star Wars Settings</div>
+        </div>
+        <div class="img-text">Settings</div>
+
+      </a>
+    </div>
+
+    <div class="img-box">
+      <a href = "https://collider.com/star-wars-all-eras-explained/" aria-label="Star Wars Eras">
+        <div class="img-box2">
+            <img src="./img/index-eras-session.jpg" alt="Right" class="rounded-image">
+            <div class="overlay-text">External link for Star Wars Eras.</div>
+        </div>
+        <div class="img-text">Eras</div>
+      </a>
+    </div>
+  </div>
+
+<!-- Help button -->
+<button class="help-btn" title="Help"></button>
+
+<!-- Scroll to Top button -->
+<button class="scroll-to-top" title="Go to top"></button>
+
+<!-- Back to Main button -->
+<button class="back-to-main" title="Back to main page"></button>
+
+<!-- More button -->
+<a href="https://www.starwars.com/" target="_blank" class="more-btn" title="More" aria-label="StarWars Official website"></a>
+
+  <!-- Footer -->
+  <footer id = "index-footer" class="main-footer">
+    <div class="footer-content">
+        <p>Thank you for visiting my Website. Leave me feedback if you like :)</p>
+        <p>Copyright © 2024 Zehua Liu. All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src = "dropDown.js"></script>
+  <script src = "helpButton.js"></script>
+  </body>
+</html>

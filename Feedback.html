@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./default.css">
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Madimi+One&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Bad+Script&family=Madimi+One&family=Ojuju:wght@200..800&family=Rock+3D&display=swap" rel="stylesheet">
+    <title>Feedback Form</title>
+</head>
+<body>
+  <!-- The header section -->
+  <header id="index-header" class="main-header">
+    <div class="header-content">
+      <!-- Logo section -->
+      <img src="./img/myLogo.png" alt="My Logo">
+      <!-- Navigation menu -->
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html" aria-label="Link to index page">Home</a></li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="details-dropdown" aria-label="Details">Details</a>
+            <!-- Dropdown Menu Items -->
+            <ul id="details-dropdown" class="dropdown-content">
+              <li><a href="me.html" aria-label="Link to about me page">About me</a></li>
+              <li><a href="sitemap.html" aria-label="Link to sitemap of whole website">Site Map</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="contact-dropdown" aria-label="Contact">Contact</a>
+            <!-- Dropdown Menu Items -->
+            <ul id="contact-dropdown" class="dropdown-content">
+              <li><a href="contact.html" aria-label="Link to contact information page">Contact Information</a></li>
+              <li><a href="Feedback.html" aria-label="Link to Feedback page to give Feedback">Feedback Form</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="about-dropdown" aria-label="About">About</a>
+            <!-- Dropdown Menu Items -->
+            <ul id="about-dropdown" class="dropdown-content">
+              <li><a href="sourceLog.html" aria-label="Link to sourceLog page for website">Source Log</a></li>
+              <li><a href="assignment.html" aria-label="Link to assignment page">Assignment Link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    
+
+  <main>
+    <section class="box">
+      <h1>Feedback Form</h1>
+      <form action="mailto:u7544341@anu.edu.au?subject=Website%20Feedback" method="post" enctype="text/plain">
+        <label for="fname">Your Name</label><br>
+        <textarea id="fname" name="fname" rows="1" cols="20" placeholder="Your name is..."></textarea><br>
+        
+        <label>Gender</label><br>
+        <input type="radio" name="gender" value="male" id="gender-male"><label for="gender-male">Male</label>
+        <input type="radio" name="gender" value="female" id="gender-female"><label for="gender-female">Female</label><br>
+        
+        <label for="email">Your email address</label><br>
+        <textarea id="email" name="email" rows="1" cols="20" placeholder="Your email is..."></textarea><br>
+        
+        <label>How do you like my site?</label><br>
+        <input type="radio" name="like" value="very much" id="like-very-much"><label for="like-very-much">I really like it!</label>&nbsp;&nbsp;
+        <input type="radio" name="like" value="a little" id="like-a-little"><label for="like-a-little">A little bit.</label><br>
+        <input type="radio" name="like" value="ok" id="like-ok"><label for="like-ok">I think it is ok.</label>&nbsp;&nbsp;
+        <input type="radio" name="like" value="no" id="like-no"><label for="like-no">I don't like it.</label><br>
+        
+        <label for="feedbackf">Please fill in your feedbacks regarding how this website could be improved?</label><br>
+        <textarea id="feedbackf" name="message" rows="5" cols="50" placeholder="Please type your feedback here..."></textarea><br>
+        <input type="reset" value="Clear">
+        <input type="submit" value="Send it">
+      </form>
+    </section>
+  </main>
+
+<!-- Help button -->
+<button class="help-btn" title="Help"></button>
+
+<!-- Scroll to Top button -->
+<button class="scroll-to-top" title="Go to top"></button>
+
+<!-- Back to Main button -->
+<button class="back-to-main" title="Back to main page"></button>
+
+<!-- More button -->
+<a href="https://www.starwars.com/" target="_blank" class="more-btn" title="More" aria-label="StarWars Official website"></a>
+
+  <!-- Footer -->
+  <footer id = "index-footer" class="main-footer">
+    <div class="footer-content">
+        <p>Thank you for visiting my Website. Leave me feedback if you like :)</p>
+        <p>Copyright © 2024 Zehua Liu. All rights reserved</p>
+    </div>
+  </footer>
+
+
+
+    <script src = "dropDown.js"></script>
+    <script src = "helpButton.js"></script>
+</body>
+</html>

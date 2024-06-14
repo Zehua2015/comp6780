@@ -1,0 +1,336 @@
+  /* Defines the animation properties */
+  .star, .wars {
+    animation: starwars 10s ease-out 1 forwards;
+    /* Animation lasts for 10 seconds, eases out, runs once, and retains the final state */
+  }
+  
+  .byline span {
+    animation: spin-letters 10s linear 1 forwards;
+  }
+  
+  .byline {
+    animation: move-byline 10s linear 1 forwards;
+  }
+  
+  /* Defines the keyframes */
+  @keyframes starwars {
+    0% {
+      opacity: 0; /* Start fully transparent */
+              transform: scale(1.5) translateY(-0.75em);
+    }
+    20% {
+      opacity: 1; /* Fully visible */
+    }
+    89% {
+      opacity: 1;
+              transform: scale(1);
+    }
+    100% {
+      opacity: 0; /* End fully transparent */
+    }
+  }
+  
+  @keyframes spin-letters {
+    0%, 10% {
+      opacity: 0;
+              transform: rotateY(90deg);
+    }
+    30% {
+      opacity: 1;
+    }
+    70%, 80% {
+              transform: rotateY(0);
+      opacity: 1;
+    }
+    88%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes move-byline {
+    0% {
+              transform: translateZ(5em);
+    }
+    100% {
+              transform: translateZ(0);
+    }
+  }
+  
+  /* General styles and layout */
+  .starwars-demo {
+    height: 18em;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 34em;
+            perspective: 800px;
+            /* transform-style: preserve3d; */
+  }
+  
+  .byline span {
+    display: inline-block;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  .star, .wars, .byline {
+    position: absolute;
+  }
+  
+  .star {
+    top: -0.75em;
+  }
+  
+  .wars {
+    bottom: -0.5em;
+  }
+  
+  .byline {
+    color: #fff;
+    font-size: 2.2em;
+    left: -2em;
+    letter-spacing: 0.4em;
+    right: -2em;
+    text-align: center;
+    text-transform: uppercase;
+    top: 30%;
+  }
+
+
+  .welcome-text {
+    text-align: center;
+    font-family: "Rock 3D", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+}
+
+.author-text {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    /* font-optical-sizing: auto; */
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+}
+.author-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+
+.skip-container {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.skip-text {
+  font-family: "Madimi One", sans-serif;
+  margin: 0;
+  /* padding: 20dx; */
+  color: #ff0;
+  font-size: 25px;
+  opacity: 0.3;
+  text-transform: uppercase;
+}
+
+.img-container {
+  display: flex;
+  justify-content: space-between; /* display images in the container */
+  padding: 20px;
+}
+
+.img-box {
+  flex: 1; /* images come with same space */
+  padding: 40px;
+  position:relative;
+}
+
+.rounded-image {
+  width: 100%;
+  height: auto; 
+  border-radius: 20px; /* round the image */
+}
+
+.rounded-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* round the image */
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.img-box:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.img-text {
+  position: absolute;
+  bottom: 10%;
+  left: 55%;
+  width: 20%; /* Stretch the text box across the image width */
+  height: 20%;
+  color: white; /* Text color */
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; 
+  border-radius: 20px; /* Match the image's border radius */
+  font-size: 5em;
+  font-family: "Racing Sans One", sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  font-style: normal;
+}
+
+/* R2D2 image style */
+#R2D2 {
+  width: 160px;
+  height: auto;
+  top: 50%;
+  position: absolute;
+  /* display: block; */
+  transform: translate(-50%, -50%);
+}
+
+.session-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Text font for CTA page*/
+.CTA {
+  position: relative;
+  width: 50%;
+  left: 50%;
+  /* padding-left: 30px; */
+  padding-top: 20px;
+  font-family: "Racing Sans One", sans-serif;
+  font-weight: 200;
+  font-size: 50px;
+  font-style: normal;
+}
+
+#R2-region {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 260px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* create CTA button! */
+.button {
+  position: absolute;
+  right: 20%;
+  bottom: 20%;
+  transform: scale(1.5);
+  background-color: black;
+  color: white;
+  padding: 10px 30px; /* Padding inside the button */
+  font-family: 'Arial', sans-serif; /* Font family for the text */
+  font-size: 16px; 
+  
+  font-weight: bold; /* Font weight for the text */
+  border: 2px solid #FFD700; /* Gold border color */
+  border-radius: 25px; /* Rounded corners */
+  outline: none; /* Removes the outline */
+  cursor: pointer; /* Cursor changes to a hand icon */
+  box-shadow: 0 0 20px #FFD700; /* Glowing effect */
+  text-shadow: 0 0 5px #FFD700; /* Text glowing effect */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  text-transform: uppercase;
+}
+
+.button:hover, /* When mouse hover, or use tab to focus on this element*/
+.button:focus {
+  box-shadow: 0 0 30px #FFD700, 0 0 40px #FFD700;
+}
+
+.button:active {
+  transform: scale(0.95); /* Slightly decreases the button size when clicked */
+}
+
+/* text shown above the image */
+.img-box2 .overlay-text {
+  position: absolute;
+  top: 50%;  /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Align center */
+  color:yellow;
+  font-size: 30px; /* Large text size */
+
+  visibility: hidden; /* Hidden by default */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth transition for text fade in */
+}
+
+/* text shown when mouse hover */
+.img-box2:hover .overlay-text {
+  visibility: visible;
+  opacity: 1; /* Show the text on hover */
+}
+
+.img-box2:hover {
+  opacity: 0.5;
+}
+
+/* loading bb8 scale */
+
+#content {
+  display: none;
+  position: relative;
+  z-index: 1;
+}
+#loading {
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 1000;
+color: yellowgreen;
+font-size: 24px;
+font-family: "Montserrat", sans-serif;
+text-align: center;
+flex-direction: column;
+}
+
+#loading .loading-background-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%, -60%);
+  width: 35%;
+  height: 25%;
+  z-index: -1;
+}
+
+/* For BB8 */
+#loading .loading-img {
+  width: 150px;
+  height: auto;
+  z-index: 1;
+}
+
+#loading span {
+  margin-top: 20px;
+  z-index: 1;
+}

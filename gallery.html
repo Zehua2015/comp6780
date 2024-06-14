@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./default.css">
+    <link rel="stylesheet" href="./moviesPage.css">
+    <link rel="stylesheet" href="./gallery.css">
+  <!-- Different fonts using here -->
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Madimi+One&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Madimi+One&family=Ojuju:wght@200..800&family=Rock+3D&display=swap" rel="stylesheet">
+      <!-- author-text-font -->  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <!-- index-title-text-font -->  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <title>Gallery</title>
+</head>
+<body>
+  <!-- The header section -->
+  <header id="index-header" class="main-header">
+    <div class="header-content">
+      <!-- Logo section -->
+      <img src="./img/myLogo.png" alt="My Logo">
+      <!-- Navigation menu -->
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html" aria-label="Link to index page" tabindex="1">Home</a></li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="details-dropdown" aria-label="Details" tabindex="2">Details</a>
+            <!-- Dropdown Menu Items -->
+            <ul id="details-dropdown" class="dropdown-content">
+              <li><a href="me.html" aria-label="Link to about me page"  tabindex="3">About me</a></li>
+              <li><a href="sitemap.html" aria-label="Link to sitemap of whole website" tabindex="4">Site Map</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="contact-dropdown" aria-label="Contact" tabindex="5">Contact</a>
+            <!-- Dropdown Menu Items -->
+            <ul id="contact-dropdown" class="dropdown-content">
+              <li><a href="contact.html" aria-label="Link to contact information page" tabindex="6">Contact Information</a></li>
+              <li><a href="Feedback.html" aria-label="Link to Feedback page to give Feedback" tabindex="7">Feedback Form</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="about-dropdown" aria-label="About" tabindex="8">About</a>
+            <!-- Dropdown Menu Items -->
+            <ul id="about-dropdown" class="dropdown-content">
+              <li><a href="sourceLog.html" aria-label="Link to sourceLog page for website" tabindex="9">Source Log</a></li>
+              <li><a href="assignment.html" aria-label="Link to assignment page" tabindex="10">Assignment Link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  
+  <!-- Gallery page starts -->
+    <div class = "title">Gallery</div>
+    <div class = "title-with-line">Click to Open image with title / comment</div>
+    <div class="gallery">
+        <div class="gallery-item" tabindex="11" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery1.png" alt="Star Wars Episode VII Poster"></div>
+        <div class="gallery-item" tabindex="12" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery2.png" alt="Clone Tropper, Jedi and Sith"></div>
+        <div class="gallery-item" tabindex="13" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery13.png" alt="Anakin Skywalker as a Jedi"></div>
+        <div class="gallery-item" tabindex="14" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery3.png" alt="Jedi Master Yoda"></div>
+        <div class="gallery-item" tabindex="15" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery4.png" alt="Storm Tropper On March"></div>
+        <div class="gallery-item" tabindex="16" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery14.png" alt="Star Wars: Clone Wars Animation Poster"></div>
+        <div class="gallery-item" tabindex="17" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery5.png" alt="X-Wings fighter"></div>
+        <div class="gallery-item" tabindex="18" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery6.png" alt="Young Obi-wan Kenobi and Qui-Gon Jinn"></div>
+        <div class="gallery-item" tabindex="19" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery7.png" alt="AT-AT On March"></div>
+        <div class="gallery-item" tabindex="20" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery8.png" alt="Clone Tropper Unit"></div>
+        <div class="gallery-item" tabindex="21" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery9.png" alt="R2D2"></div>
+        <div class="gallery-item" tabindex="22" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery10.png" alt="Star Wars: Attack of the Clones Poster"></div>
+        <div class="gallery-item" tabindex="23" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery11.png" alt="Darth Vader"></div>
+        <div class="gallery-item" tabindex="24" onclick="openModal(this)" onkeydown="if (event.key === 'Enter') openModal(this)"><img src="./img/gallery/gallery12.png" alt="Slave I Starship"></div>
+    </div>
+
+<!-- The Modal - show larger image-->
+<div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="close" tabindex="-1" onclick="closeModal()" onkeydown="if (event.key =='Enter') closeModal()" >&times;</span>
+    <!-- Left Arrow -->
+    <span class="prev"  tabindex="-1" onclick="changeImage(-1)" onkeydown="if (event.key == 'Enter') changeImage(-1)">&#10094;</span>
+    <!-- Right Arrow -->
+    <span class="next" tabindex="-1" onclick="changeImage(1)" onkeydown="if (event.key == 'Enter') changeImage(1)">&#10095;</span>
+    <!-- Modal Content (The Image) -->
+    <!-- Note that the img here is only a place holder -->
+    <img class="modal-content" id="img01" src="img/background.jpg" alt="show larger gallery modal">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+</div>
+  
+    <!-- Left Arrow -->
+<span class="prev" onclick="changeImage(-1)">&#10094;</span>
+
+<!-- Right Arrow -->
+<span class="next" onclick="changeImage(1)">&#10095;</span>
+
+
+
+<!-- Help button -->
+<button class="help-btn" title="Help"></button>
+
+<!-- Scroll to Top button -->
+<button class="scroll-to-top" title="Go to top"></button>
+
+<!-- Back to Main button -->
+<button class="back-to-main" title="Back to main page"></button>
+
+<!-- More button -->
+<a href="https://www.starwars.com/" target="_blank" class="more-btn" title="More" aria-label="StarWars Official website"></a>
+
+  <!-- Footer -->
+  <footer id = "index-footer" class="main-footer">
+    <div class="footer-content">
+        <p>Thank you for visiting my Website. Leave me feedback if you like :)</p>
+        <p>Copyright © 2024 Zehua Liu. All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src = "galleryPageJs.js"></script>
+  <script src = "dropDown.js"></script>
+  <script src = "helpButton.js"></script>
+  </body>
+</html>
