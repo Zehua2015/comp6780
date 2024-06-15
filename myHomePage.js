@@ -98,14 +98,16 @@ const r2d2 = document.getElementById('R2D2');
 
 // Final State for index.html (homepage website)
 function showFinalState() {
+    document.body.style.backgroundImage = "url('./img/CTA-background.jpg')";
     document.getElementById('index-demo-page').style.display = 'none';
     document.getElementById('index-author-text').style.display = 'none';
     document.getElementById('index-author-container').style.display = 'none';
     document.getElementById('index-header').style.display = 'block';
     document.getElementById('index-skip').style.display = 'none';
+
     document.getElementById('CTA-session').style.display = 'block';
 
-    document.body.style.backgroundImage = "url('./img/CTA-background.jpg')";
+    // document.body.style.backgroundImage = "url('./img/CTA-background.jpg')";
     document.body.style.backgroundSize = "cover";
     removeTieFighters();
     moveR2D2();
