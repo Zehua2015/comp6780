@@ -107,17 +107,15 @@ function showFinalState() {
     document.getElementById('index-skip').style.display = 'none';
 
     document.getElementById('CTA-session').style.display = 'block';
-
-    // document.body.style.backgroundImage = "url('./img/CTA-background.jpg')";
     document.body.style.backgroundSize = "cover";
     removeTieFighters();
     moveR2D2();
 }
 
 // Set initial R2D2 position
-r2d2.style.left = window.innerWidth * 0.5 + 'px';
+r2d2.style.left = window.innerWidth * 0.2 + 'px';
 
-const targetPosition = window.innerWidth * 0.9;
+const targetPosition = window.innerWidth * 0.65;
 
 function moveR2D2() {
     let currentLeft = parseFloat(r2d2.style.left);

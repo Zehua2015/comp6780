@@ -236,7 +236,7 @@
 /* create CTA button! */
 .button {
   position: absolute;
-  right: 20%;
+  right: 15%;
   bottom: 20%;
   transform: scale(1.5);
   background-color: black;
@@ -338,7 +338,7 @@ flex-direction: column;
 
 
 /* For smaller screen */
-@media (max-width: 425px) {
+@media (min-width: 100px) and (max-width: 430px) {
   .author-text {
     font-size: 30px;
   }
@@ -372,6 +372,38 @@ flex-direction: column;
 
   .byline {
     scale: 0.6;
+  }
+
+  .CTA {
+    padding: 0;
+    width: 100%;
+    left: 0;
+    font-size: 45px;
+  }
+
+  #R2D2 {
+    scale: 0.7;
+    left: 0;
+  }
+
+  #loading .loading-background-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-32%, -65%);
+    width: 85%;
+    height: 22%;
+    z-index: -1;
+  }
+
+  .button {
+    right: 52%;
+  }
+}
+
+@media (max-width: 400px) {
+  .CTA {
+    font-size: 35px;
   }
 
 }

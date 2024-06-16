@@ -72,7 +72,7 @@
 
 /* Margins between navigation items */
 .navigation ul li {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 /* Base styles for navigation links */
@@ -108,7 +108,7 @@
     visibility: hidden; /* Initially hidden */
     position: absolute; /* Positioned absolutely within its relative container */
     background-color: #333;
-    min-width: 160px; /* Minimum width */
+    /* min-width: 160px; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Adds shadow for depth */
     z-index: 1; /* Ensures it stacks above other content */
     top: calc(100% + 12px); /* Positioned slightly below the dropdown trigger */
@@ -184,7 +184,8 @@ main {
     left: 50%;
     transform: translate(-50%, -54%);
     padding: 40px;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 40px;
     border-radius: 10px;
     box-shadow: 0 0 5px #000;
     text-align: left;
@@ -245,6 +246,11 @@ main {
     width: 100%;
 }
 
+.box table a {
+    text-decoration: underline;
+}
+
+
 /* my-** is for img and text of "about me" session */
 .my-text {
     font-family: "Madimi One", sans-serif;
@@ -257,7 +263,7 @@ main {
 }
 
 .my-photo img {
-    width: 450px;
+  width: 450px;
   height: auto;
 }
 
@@ -513,7 +519,11 @@ span {
   /* For smaller device */
 
   /* Media query for screens with a maximum width of 425px */
-  @media (max-width: 425px) {
+  @media (min-width: 100px) and (max-width: 430px) {
+    .loading-background-img {
+      transform: scale(2);
+  }
+  
   .main-header {
     padding: 0px 0px;
   }
@@ -522,10 +532,10 @@ span {
     display: flex;
   }
 
-  .navigation ul li {
+  .navigation ul li .dropdown{
     /* position: absolute; */
     width: 15%;
-    margin-right: 15px;
+    margin-right: 5px;
     display: flex;
     text-align: center; /* Centers the text within each item */
   }
@@ -533,6 +543,99 @@ span {
   .navigation ul li a {
     display: block; /* Makes the links fill their container */
     padding: 10px; /* Adds padding around the links */
-    font-size: 15px;
+    font-size: 14px;
   }
+
+  .box {
+    padding-left: 15px;
+    max-height: 550px;
+  }
+  
+  #myform {
+    padding-bottom: 10px;
+  }
+
+  #feedbackf {
+    width: 30ch
+  }
+
+  body {
+    background-position: right top;
+  }
+
+  .my-photo img {
+    margin-top: 0px;
+    width: 300px;
+  }
+
+  .my-content {
+    display: block;
+    padding-bottom: 10px;
+    margin-top: 25px;
+  }
+
+  .my-text {
+    margin-top: -70px;
+    font-size: 25px;
+  }
+
+  .reflection-text {
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 25px;
+  }
+  .reflection-title {
+    font-size: 35px;
+  }
+
+  .welcome-text {
+    font-size: 35px;
+  }
+  .dropdown-content {
+    max-width: 120px;
+  }
+  #about-dropdown {
+    font-size: 10px;
+  }
+  .dropdown.active > .dropdown-content {
+    transform: translateX(-15px);
+  }
+}
+
+@media (max-width: 425px) {
+  .navigation ul li a {
+    display: block; /* Makes the links fill their container */
+    padding: 10px; /* Adds padding around the links */
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navigation ul li a {
+    display: block; /* Makes the links fill their container */
+    padding: 10px; /* Adds padding around the links */
+    font-size: 11px;
+  }
+}
+
+@media (max-height: 700px) {
+  .box {
+    width: 80%;
+    /* max-width: 300px; */
+    max-height: 300px;
+    background-color: rgba(255, 255, 255, .05);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -54%);
+    padding: 40px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+    text-align: left;
+    color: #fff;
+    font-family: "Bad Script", cursive;
+    overflow: auto;
+}
 }

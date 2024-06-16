@@ -65,9 +65,20 @@ function renderTable(page) {
 
     pageData.forEach(rowData => {
         const row = document.createElement('tr');
-        rowData.forEach(cellData => {
+        rowData.forEach((cellData, index) => {
             const cell = document.createElement('td');
-            cell.textContent = cellData;
+
+            // If it's the last cell in the row (the URL), create a link
+            if (index === rowData.length - 1) {
+                const link = document.createElement('a');
+                link.href = cellData;
+                link.textContent = 'link';
+                link.target = '_blank'; // Open link in new tab
+                cell.appendChild(link);
+            } else {
+                cell.textContent = cellData;
+            }
+
             row.appendChild(cell);
         });
         table.appendChild(row);
