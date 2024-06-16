@@ -335,3 +335,43 @@ flex-direction: column;
   margin-top: 20px;
   z-index: 1;
 }
+
+
+/* For smaller screen */
+@media (max-width: 425px) {
+  .author-text {
+    font-size: 30px;
+  }
+  .skip-text {
+    font-size: 20px;
+  }
+
+  @keyframes starwars {
+    0% {
+      opacity: 0; /* Start fully transparent */
+              transform: scale(0.7) translateY(-0.75em);
+    }
+    20% {
+      opacity: 1; /* Fully visible */
+    }
+    89% {
+      opacity: 1;
+              transform: scale(0.5);
+    }
+    100% {
+      opacity: 0; /* End fully transparent */
+    }
+  }
+  .star {
+    top: +1.8em;
+  }
+  
+  .wars {
+    bottom: 1.8em;
+  }
+
+  .byline {
+    scale: 0.6;
+  }
+
+}

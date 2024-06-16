@@ -93,6 +93,7 @@ document.addEventListener('keydown', function(event) {
         skipAnimation();
     }
 });
+document.addEventListener('touchstart', skipAnimation);
 
 const r2d2 = document.getElementById('R2D2');
 

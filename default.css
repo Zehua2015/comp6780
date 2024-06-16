@@ -1,10 +1,9 @@
 .main-header {
-    background-color: #333; /* Sets the header background to dark gray */
-    color: white; /* Text color within the header */
-    padding: 5px 20px; /* Padding around content */
-    font-family: "Artifika", serif; /* Font family */
-    font-weight: 400; /* Font weight */
-    /* width: 100%; */
+  background-color: #333; /* Sets the header background to dark gray */
+  color: white; /* Text color within the header */
+  font-family: "Artifika", serif; /* Font family */
+  font-weight: 400; /* Font weight */
+  /* width: 100%; */
 }
 
 /* Adjusts header content to display in a row using flexbox */
@@ -19,7 +18,7 @@
     border-radius: 50%; /* Makes the logo circular */
     width: 45px;
     height: 45px;
-    margin-right: 20px; /* Space to the right of the logo */
+    margin: 5px; /* Space to the right of the logo */
 }
 /* Size for facebook sharing button */
 .fb-share-button {
@@ -61,12 +60,14 @@
 
 /* "Navigation" and "drop-down" is designed for the header session*/
 /* Styles for the navigation menu */
+
+
 .navigation ul {
-    list-style-type: none; /* Removes bullets from list items */
-    padding: 0; /* Removes padding */
-    margin: 0; /* Removes margins */
-    display: flex; /* Displays list items in a row */
-    align-items: center; /* Vertically centers list items */
+  list-style-type: none; /* Removes bullets from list items */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margins */
+  display: flex; /* Displays list items in a row */
+  align-items: center; /* Vertically centers list items */
 }
 
 /* Margins between navigation items */
@@ -506,3 +507,32 @@ span {
     opacity: 1;
     pointer-events: auto;
   }
+
+
+
+  /* For smaller device */
+
+  /* Media query for screens with a maximum width of 425px */
+  @media (max-width: 425px) {
+  .main-header {
+    padding: 0px 0px;
+  }
+
+  .navigation ul {
+    display: flex;
+  }
+
+  .navigation ul li {
+    /* position: absolute; */
+    width: 15%;
+    margin-right: 15px;
+    display: flex;
+    text-align: center; /* Centers the text within each item */
+  }
+
+  .navigation ul li a {
+    display: block; /* Makes the links fill their container */
+    padding: 10px; /* Adds padding around the links */
+    font-size: 15px;
+  }
+}
