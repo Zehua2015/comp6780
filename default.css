@@ -543,7 +543,7 @@ span {
   .navigation ul li a {
     display: block; /* Makes the links fill their container */
     padding: 10px; /* Adds padding around the links */
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .box {
