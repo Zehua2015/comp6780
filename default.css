@@ -600,6 +600,30 @@ span {
   .dropdown.active > .dropdown-content {
     transform: translateX(-15px);
   }
+
+  .social-networking-button {
+    color:#fff;
+    display: flex;
+    /* padding: 20px; */
+    gap: 10px;
+    padding-left: 0%; /* Start from 55% left (after the title "Movies") */
+    padding-top: 25px;
+    width: 30%; /* set width to keep the sharing icon within limits*/ 
+    scale: 50%;
+  }
+  .SNB-text {
+      padding-top: 25px;
+      font-size: 20px;
+  }
+  
+  .fb-share-button {
+    padding-top: 20%;
+  }
+
+  .mode-button {
+    display: none;
+  }
+
 }
 
 @media (max-width: 425px) {

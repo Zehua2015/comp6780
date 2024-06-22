@@ -31,8 +31,6 @@
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
     overflow: auto; /* Enable scroll if needed */
@@ -42,9 +40,13 @@
   
   /* Modal Content */
   .modal-content {
-    max-height: 90vh; /* Maximum height is 80% of the viewport height */
+    /* transform: translateY(50%); */
     margin: auto; /* This will center the image vertically and horizontally */
+    max-height: 90vh; /* Maximum height is 80% of the viewport height */
+    max-width: 90vw; /* Maximum height is 80% of the viewport height */
     display: block;
+    justify-content: center;
+    align-items: center;
   }
   
 /* Make sure caption (title / comment of images) centred in the screen */
@@ -91,11 +93,16 @@ body.modal-open {
     width: 100vw;
     position: fixed;
   }
+
+body.modal-open .prev, body.modal-open .next {
+  display: block;
+}
   
   
 
 /* Arrow buttons for navigation */
 .prev, .next {
+  display: none;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -128,17 +135,12 @@ body.modal-open {
   background-color: rgba(0,0,0,0.8);
 }
 
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
 
-
-
-
-  @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)}
-    to {-webkit-transform:scale(1)}
-  }
-  
-  @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-  }
-  
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}

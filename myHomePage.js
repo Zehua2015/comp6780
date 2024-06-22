@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Element with ID "byline" does not exist.');
     }
+
+    // Detect if the device supports touch
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+        document.addEventListener('touchstart', skipAnimation);
+        document.querySelector('.skip-text p').textContent = 'Touch screen to skip';
+    } else {
+        document.querySelector('.skip-text p').textContent = 'Press space to skip';
+    }
 });
 
 function fadeIn(element, duration) {
@@ -93,7 +101,6 @@ document.addEventListener('keydown', function(event) {
         skipAnimation();
     }
 });
-document.addEventListener('touchstart', skipAnimation);
 
 const r2d2 = document.getElementById('R2D2');
 

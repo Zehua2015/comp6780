@@ -34,7 +34,7 @@
   flex: 1; /* images come with same space */
   padding: 20px;
   position:relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: auto;
 }
 
@@ -46,11 +46,22 @@
 
 .rounded-image {
   /* this is important for setting the scale of the original iamge, so that it could be displayed properly */
-  width: 210px;
-  height: 280px;
+  /* width: 210px;
+  height: 280px; */
   border-radius: 10px; /* round the image */
   transition: transform 0.3s ease; /* Smooth transition for zoom effect */
 }
+
+@media (min-width: 600px) {
+  .rounded-image {
+    /* this is important for setting the scale of the original iamge, so that it could be displayed properly */
+    width: 210px;
+    height: 280px;
+    border-radius: 10px; /* round the image */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+  }
+}
+
 
 .img-box:hover {
   transform: scale(1.05); /* Slightly enlarge the image on hover */
@@ -96,9 +107,10 @@
 
 /* create CTA button! */
 .button {
-/* position: relative; */
-/* left: 80%; */
+position: relative;
+left: 80%;
 scale: 1.5;
+width: 12%;
 background-color: black; /* Button background color */
 color: white; /* Button text color */
 padding: 10px 30px; /* Padding inside the button */
@@ -126,4 +138,25 @@ transform: scale(0.95); /* Slightly decreases the button size when clicked */
 
 .hide-info {
   display: none;
+}
+
+@media (min-width: 100px) and (max-width: 430px) {
+  .img-container {
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    /* flex-direction: column; */
+  }
+
+  .img-box {
+    width: 20%;
+    height: auto;
+    padding: 0.5%;
+  }
+  
+  .button {
+    left: 50%;
+    width: 30%;
+    scale: 1.2;
+  }
 }
