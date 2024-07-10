@@ -1,5 +1,10 @@
 import { removeTieFighters, modelsLoaded, displayModels } from './tieFighter.js';
 
+let spacePressTimer;
+let progressInterval;
+const progressBar = document.getElementById('progress-bar');
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // "byline" element for "Comp6780 Website"
     var bylineElement = document.getElementById('byline');
@@ -23,12 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Detect if the device supports touch
-    if ('ontouchstart' in window || navigator.maxTouchPoints) {
-        document.addEventListener('touchstart', skipAnimation);
-        document.querySelector('.skip-text p').textContent = 'Touch screen to skip';
-    } else {
-        document.querySelector('.skip-text p').textContent = 'Press space to skip';
-    }
+//     if ('ontouchstart' in window || navigator.maxTouchPoints) {
+//         document.addEventListener('touchstart', skipAnimation);
+//         document.querySelector('.skip-text p').textContent = 'Touch screen to skip';
+//     } else {
+//         document.querySelector('.skip-text p').textContent = 'Press space to skip';
+//     }
 });
 
 function fadeIn(element, duration) {
@@ -92,15 +97,17 @@ document.querySelector('.byline').addEventListener('animationend', handleAnimati
 
 // If Space pressed, skip animation
 function skipAnimation() {
+    progressBar.style.display = 'none';
+    document.getElementById('progress-container').style.display = 'none';
     document.querySelector('.byline').removeEventListener('animationend', handleAnimationEnd);
     showFinalState();
 }
 
-document.addEventListener('keydown', function(event) {
-    if (event.keyCode === 32) {
-        skipAnimation();
-    }
-});
+// document.addEventListener('keydown', function(event) {
+//     if (event.keyCode === 32) {
+//         skipAnimation();
+//     }
+// });
 
 const r2d2 = document.getElementById('R2D2');
 
@@ -151,6 +158,69 @@ const checkModelsLoaded = () => {
         displayModels();
         document.getElementById('loading').style.display = 'none';
         document.getElementById('content').style.display = 'block';
+    
+        // Detect if the device supports touch
+        if ('ontouchstart' in window || navigator.maxTouchPoints) {
+            document.addEventListener('touchstart', skipAnimation);
+            document.querySelector('.skip-text p').textContent = 'Touch screen to skip';
+        } else {
+            document.querySelector('.skip-text p').textContent = 'Press space to skip';
+        }
+
+        // document.addEventListener('keydown', function(event) {
+        //     if (event.keyCode === 32) {
+        //         skipAnimation();
+        //     }
+        // });
+
+
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'Space') {
+                // 如果还没有开始计时，开始计时
+                if (!spacePressTimer) {
+                    spacePressTimer = setTimeout(() => {
+                        skipAnimation();
+                        spacePressTimer = null; // reset timer
+                        clearInterval(progressInterval);
+                    }, 1000); // 1000 ms
+
+                    // 启动进度条更新计时器
+                    progressInterval = setInterval(() => {
+                        const progressBarWidth = parseFloat(progressBar.style.width) || 0;
+                        progressBar.style.width = `${progressBarWidth + 10}%`;
+                        // if (progressBarWidth >= 100) {
+                        //     clearInterval(progressInterval); // stop renewing when 100%
+                        // }
+                    }, 50); // upadte bar every 50 ms
+
+                }
+            }
+        });
+
+        document.addEventListener('keyup', function(event) {
+            if (event.code === 'Space') {
+                // 如果用户松开空格键，清除计时器
+                if (spacePressTimer) {
+                    clearTimeout(spacePressTimer);
+                    spacePressTimer = null;
+                    clearInterval(progressInterval); // 清除进度条更新计时器
+                    progressBar.style.width = '0%'; // 重置进度条
+                }
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
     } else {
         requestAnimationFrame(checkModelsLoaded);
     }

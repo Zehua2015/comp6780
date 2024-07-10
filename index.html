@@ -16,12 +16,6 @@
     <script type="module" src="tieFighter.js"></script>
     <script type="module" src="myHomePage.js"></script>
     <style>
-        /* body {
-            margin: 0;
-            overflow: hidden;
-            position: relative;
-            background-image: url('./img/background.jpg');
-        } */
         canvas {
             display: block;
             position: fixed;
@@ -30,6 +24,25 @@
             width: 100%;
             height: 100%;
             z-index: -1;
+        }
+
+        /* Progress bar container */
+        .progress-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color: transparent;
+            z-index: 100;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            width: 0;
+            height: 100%;
+            background-color: yellow;
+            transition: width 0.1s;
         }
     </style>
 </head>
@@ -147,6 +160,18 @@
                 </div>
             </div>
         </main>
+
+        <div class="progress-container" id="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+
+
+
+
+
+
+
 
         <!-- Help button -->
         <button class="help-btn" title="Help"></button>
